@@ -1,0 +1,626 @@
+
+.contact {
+  color: var(--color-slategray-100);
+}
+.us {
+  color: var(--color-white);
+}
+.contact-us,
+.home {
+  text-decoration: none;
+  font-size: var(--font-size-7xl);
+  font-family: var(--font-baloo-bhai);
+  display: inline-block;
+  width: 200.6px;
+}
+.contact-us:hover,
+.home:hover {
+  animation: 1s ease 1s 1 normal none scale-up;
+  opacity: 1;
+}
+.home {
+  left: 0;
+  color: var(--color-slategray-100);
+  width: 108.13px;
+}
+.nav-text {
+display: flex;
+    position: relative;
+    
+}
+
+.nav-text-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.loginsignup {
+  position: relative;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--font-baloo-bhai-2);
+  color: var(--color-white);
+  text-align: left;
+}
+.loginsignup-wrapper {
+  text-decoration: none;
+  border-radius: var(--br-3xs);
+  background: linear-gradient(91.29deg, #3b3171, #4c3590);
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-xs) var(--padding-xl);
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.loginsignup-wrapper:hover {
+  animation: 1s ease 0s infinite normal none fade-in;
+  opacity: 1;
+}
+.iconlylightnotification {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.frame-parent,
+.iconlylightnotification-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.iconlylightnotification-wrapper {
+  border-radius: var(--br-3xs);
+  border: 1px solid #2d2f33;
+  padding: var(--padding-xs);
+  align-items: flex-start;
+}
+.frame-parent {
+  padding-left: 40rem;
+  align-items: center;
+  gap: 9px;
+}
+.nav{
+   position: relative;
+  display: flex;
+  margin: 1rem 4rem;
+  padding: 2rem 0;
+}
+.sign-up-with {
+  position: absolute;
+  top: 1rem;
+  justify-content: center;
+  margin: 0 4rem;
+}
+.sign-up-with {
+  margin: 0 !important;
+  top: 9px;
+  left: 6px;
+  font-size: var(--font-size-6xl);
+  font-weight: 500;
+  font-family: var(--font-baloo-bhai-2);
+  color: var(--color-white);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 254px;
+  height: 40px;
+  flex-shrink: 0;
+  z-index: 0;
+}
+.sign-up-with-email-wrapper {
+  cursor: pointer;
+    border: 0;
+    padding: 1rem;
+    background-color: var(--color);
+    /* position: absolute; */
+    top: 380px;
+    font-size: 20px;
+    border-radius: var(--br-3xs);
+    background: linear-gradient(91.29deg, #3b3171, #4c3590);
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.span {
+  color: var(--color-slategray-200);
+}
+.blockchain-technology {
+  color: var(--color-mediumslateblue);
+}
+.our-goal-is-container {
+  /* font-size: inherit; */
+  font-weight: 500;
+  margin: 0 3rem 0 0;
+  position: relative;
+  margin-bottom: 1rem;
+  font-family: inherit;
+  display: inline-block;
+}
+.t {
+  line-height: 92px;
+}
+.ripay-the-future-of-global-t {
+  line-height: 60px;
+  color: var(--color-slategray-200);
+}
+
+.the-all-container {
+    /* margin: 2rem 0rem; */
+    position: relative;
+    font-weight: 500;
+    font-family: inherit;
+    display: inline-block;
+    /* width: 647px; */
+    line-height: 0rem;
+    color: var(--color-white);
+}
+.mid {
+  justify-content: center;
+  margin: 3rem 3rem 0 1rem;
+  justify-items: center;
+  text-align: left;
+}
+.poster-504x498-f8f8f8-pad-600x-icon {
+  position: relative;
+  width: 25%;
+  margin-right: 8rem;
+  object-fit: cover;
+}
+.main_content_txt {
+  margin: 2rem 0rem 0 5rem;
+}
+.main-content {
+  position: relative;
+  display: flex;
+  text-align: left;
+  padding: 1rem;
+  font-size: var(--font-size-6xl);
+  color: var(--color-darkgray);
+  font-family: var(--font-baloo-bhai-2);
+}
+.group-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  background-color: var(--color-mediumpurple);
+  box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.15);
+  border: 1px solid #1f2433;
+  box-sizing: border-box;
+  width: 665px;
+  height: 382px;
+}
+.user-friendly-ui {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  line-height: 35px;
+  font-weight: 500;
+  /* font-size: 2rem; */
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main2-card1-text p {
+  /* width: 25%; */
+  font-size: 1rem;
+  text-align: center;
+  color: #ffffff96;
+}
+.main2-card1-text {
+  margin: 4rem 0;
+  padding: 0;
+}
+.mobile-login-bro-2 {
+  width: 18rem;
+  /* position: relative; */
+  /* width: 100%; */
+  height: 18rem;
+  /* object-fit: cover; */
+}
+.span2 {
+  color: var(--color-slategray-300);
+}
+.our-goal-is-container1 {
+  position: absolute;
+  top: 117px;
+  left: 355px;
+  font-size: var(--font-size-6xl);
+  font-weight: 500;
+  display: inline-block;
+  width: 273px;
+  height: 178px;
+  color: var(--color-darkgray);
+}
+.rectangle-parent {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  margin: 0rem 1rem;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+.cards {
+  display: flex;
+  margin: 2rem;
+}
+
+.our-goal-is-container2 {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 500;
+    display: inline-block;
+}
+.semless-transparent-container {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  line-height: 2rem;
+  font-weight: 400;
+  font-family: inherit;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+}
+.main2-card2-txt {
+  margin: 4rem 0;
+}
+.mobile-login-rafiki-1-1 {
+  position: relative;
+  /* width: 15rem; */
+  padding: 1.5rem 1rem 0 0rem;
+  height: 15rem;
+  object-fit: cover;
+}
+.group-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  background-color: var(--color-mediumpurple);
+  box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.15);
+  border: 1px solid #000;
+  box-sizing: border-box;
+  width: 665px;
+  height: 382px;
+}
+.our-goal-is-to-make-global-tra-parent {
+  position: relative;
+  padding: 1rem; 
+  display: flex;
+  margin: 0px 0rem;
+  font-size: var(--font-size-6xl);
+  border: 2px solid white;
+  border-radius: 20px;
+  color: var(--color-darkgray);
+}
+
+.explore-endless-possibilities {
+  font-size: var(--font-size-31xl);
+  font-weight: 500;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 120.47px;
+}
+.min {
+      /* top: 652px; */
+    /* height: 518px; */
+    /* position: relative; */
+    /* text-align: center; */
+    font-size: var(--font-size-14xl);
+    color: var(--color-white);
+    font-family: var(--font-baloo-bhai-2);
+}
+.our-goal-is-container3 {
+  position: relative;
+  /* top: 184px; */
+  /* left: 564px; */
+  opacity: 50%;
+  font-size: 19px;
+  font-weight: 500;
+  display: inline-block;
+  /* width: 681px; */
+}
+.polygon {
+  color: #8251cf;
+}
+.decentralized-transaction-thro-container {
+  font-size: 30px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  /* width: 773px; */
+  /* height: 116px; */
+  color: var(--color-white);
+}
+.connected-world-rafiki-1 {
+  position: relative;
+  /* top: 0; */
+  /* left: 0; */
+  width: 35%;
+  /* height: 559px; */
+  object-fit: cover;
+}
+
+.min1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1337px;
+  height: 559px;
+}
+.mid-content {
+  margin: 1rem 5rem;
+  display: flex;
+  justify-items: center;
+  text-align: center;
+  background: #0e101ced;
+  box-shadow: 5px 5px 15px 3px black;
+  border-radius: 20px;
+  /* border: 2px solid wheat; */
+  position: relative;
+  justify-content: center;
+  font-size: var(--font-size-6xl);
+  color: var(--color-darkgray);
+  font-family: var(--font-baloo-bhai-2);
+}
+.second-last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  background-color: rgba(157, 152, 192, 0.04);
+  width: 1283px;
+  height: 460px;
+}
+.group-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-mini);
+  background-color: var(--color-gainsboro);
+  width: 1210px;
+  height: 80px;
+}
+.png-transparent-bitcoin-cash-c-icon {
+  /* position: absolute; */
+  padding: 1rem;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+.bitcoin {
+  font-weight: 500;
+}
+.btc {
+  color: var(--color-gray-100);
+  padding: 0 0 0 5px;
+}
+.bitcoin-btc-txt-container {
+  line-break: anywhere;
+  width: 100%;
+}
+.bitcoin-btc,
+.div,
+.div1,
+.div2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.bitcoin-btc {
+  /* top: 22px; */
+  /* left: 109px; */
+  display: flex;
+  /* padding: 0 1rem; */
+  font-size: var(--font-size-7xl);
+  /* width: 233px; */
+  /* height: 36px; */
+}
+
+.div, .div1, .div2 {
+  /* top: 18px; */
+  margin: 0 8rem;
+  /* left: 491px; */
+  /* padding: 0 0rem 0px 0rem; */
+  font-weight: 500;
+  /* width: 87px; */
+}
+
+.rectangle-icon {
+  position: absolute;
+  width: 1210px;
+  height: 80px;
+}
+.rectangle-group {
+  /* top: 139px; */
+  /* left: 38px; */
+  background: #3b317112;
+  box-shadow: 0px 3px 9px 6px #00000038;
+  display: flex;
+  margin: 0rem 1rem;
+  padding: 0rem 3rem 0rem 1rem;
+  border-radius: 20px;
+}
+.rectangle-group:hover {
+  animation: 1s ease 1s 1 normal none fade-in;
+  opacity: 1;
+}
+.rectangle-icon {
+  top: calc(50% - 39px);
+  left: 0;
+  border-radius: var(--br-mini);
+}
+
+.pngtreeethereum-cryptocurrenc-icon {
+  /* position: absolute; */
+  width: 45px;
+  height: 45px;
+  padding: 1.2rem 1rem;
+  object-fit: cover;
+}
+.div5,
+.etherum-eth {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+etherum-eth {
+  /* top: calc(50% - 25px); */
+  /* width: 233px; */
+  /* height: 53px; */
+  display: flex;
+}
+.div5 {
+  top: 18px;
+  left: 1082px;
+  font-weight: 500;
+  width: 87px;
+  height: 45px;
+}
+.vector-parent {
+  /* position: relative; */
+    /* top: calc(50% - 0px); */
+    /* left: 37px; */
+
+    /* left: 37px; */
+    background: #3b317112;
+    box-shadow: 0px 3px 9px 6px #00000038;
+    border-radius: 20px;
+    padding: 0 3rem 0 1rem;
+    margin: 1rem 1rem;
+    /* display: flex; */
+    /* width: 1210px; */
+    /* height: 82px; */
+    display: flex;
+}
+
+
+.download-removebg-preview-1-icon {
+  /* position: absolute; */
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  padding: 1.2rem 1rem;
+}
+.polygon-matic {
+  
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+ 
+}
+.rectangle-container {
+  background: #3b317112;
+  box-shadow: 0px 3px 9px 6px #00000038;
+  border-radius: 20px;
+  padding: 0 3rem 0 1rem;
+  margin: 1rem 1rem;
+  /* display: flex; */
+  /* width: 1210px; */
+  /* height: 82px; */
+  display: flex;
+}
+.h-change, .last-transaction, .market-cap {
+  /* position: absolute; */
+  top: 6px;
+  left: 469px;
+  display: flex;
+  padding: 0 0rem 0 12rem;
+  align-items: center;
+  /* width: 193px; */
+  /* height: 33px; */
+}
+
+.rectangle-container {
+  position: relative;
+  /* top: 326px; */
+  padding: 0 3rem 0 1rem;
+  display: flex;
+  /* left: 37px; */
+  /* width: 1210px; */
+  /* height: 80px; */
+}
+.name {
+  /* top: 0; */
+  /* left: 0; */
+  font-size: var(--font-size-6xl);
+  padding: 0 0rem 0 3rem;
+  display: flex;
+  /* display: inline-block; */
+  /* width: 71px; */
+  /* height: 46px; */
+}
+
+
+
+
+.name-parent {
+  /* position: absolute; */
+  display: flex;
+  padding: 0 3rem;
+  /* width: 1188px; */
+  /* height: 46px; */
+  font-size: var(--font-size-3xl);
+  color: var(--color-gray-100);
+}
+.popular-cryptocurrencies {
+  margin: 0;
+  /* position: relative; */
+  /* top: 13px; */
+  /* left: 48px; */
+  padding: 0 4rem;
+  font-size: 35px;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  /* width: 566px; */
+  /* height: 60px; */
+}
+.second-last {
+  /* position: absolute; */
+  box-shadow: 12px 13px 8px rgba(0, 0, 0, 0.25);
+  /* width: 1283px; */
+  /* height: 460px; */
+  text-align: left;
+  font-size: var(--font-size-6xl);
+  color: var(--color-white);
+  font-family: var(--font-baloo-bhai-2);
+}
+
+.footer-child {
+  border-radius: var(--br-3xs);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.all-copyrights-reserved {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.transaction {
+  position: relative;
+  background-color: #141627;
+  text-align: center;
+  font-size: var(--font-size-6xl);
+  color: var(--color-white);
+  font-family: var(--font-baloo-bhai-2);
+}
+
+.nav {
+  position: relative;
+  margin: 0rem 4rem;
+  padding: 1rem 0 0 1rem;
+}

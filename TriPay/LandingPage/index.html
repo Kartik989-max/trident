@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>TriPay-Blockchain Based Transaction App</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="./global.css" />
+  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="./css2/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo Bhai:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo Bhai 2:wght@400;500;600&display=swap" />
+</head>
+<script>
+  var livePrice = {
+    "async":true,
+    "scroosDomain":true,
+    "url":"https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cetherum&vs_currencies=usd",
+    "method":"GET",
+    'headers':{}
+  }
+  var btc=document.getElementById("bitcoin");
+  var eth=document.getElementById("Etherum");
+  $.ajax(livePrice).done(function (response){
+    btc.innerHTML= response.bitcoin.usd;
+    eth.innerHTML = response.etherum.usd;
+  });
+</script>
+<body>
+  <div class="transaction">
+     <nav class="nav" id="nav">
+          <div class="nav-text">
+            <a class="home" style="cursor: pointer;">Home</a>
+            <a class="contact" style="cursor: pointer;">Contact Us</a>
+        </div>
+        <div class="frame-parent">
+          <a href="./page-login.html" style="cursor: pointer;" class="loginsignup-wrapper" id="login">
+            <div class="loginsignup">Login/SignUP</div>
+          </a>
+          <div class="iconlylightnotification-wrapper">
+            <img style="cursor: pointer;"
+              class="iconlylightnotification"
+              alt=""
+              src="./public/iconlylightnotification.svg"
+            />
+          </div>
+        </div>
+      </nav> 
+
+      <main class="main-content" id="main-container">
+        <div class="main_content_txt">
+
+          <h2 class="the-all-container" id="main-txt"><span style="color: #3c3173;"> TriPay</span> - The future of Global transactions
+          </h2>
+          
+          <h5 class="our-goal-is-container" id="main_p">
+            Making Global Transactions in Polygon more Affordable, Secure, Transparent, Seamless with the
+            help of Polygon Blockchain Technology. <br>
+            'Minimum Risk Maximum Security'
+            </h5>
+          <button  class="sign-up-with-email-wrapper" autofocus id="main-btn">
+           <a style="text-decoration: none; font-weight: 600; color: white;" href="./page-register.html">Your Turn</a> </button>
+        </div>
+    
+        <img
+          class="poster-504x498-f8f8f8-pad-600x-icon"
+          alt=""
+          src="./public/main-img@2x.png"
+        />
+      </main>  
+
+
+
+
+      <section class="mid-content" id="decentralized-main">
+        <img
+              class="connected-world-rafiki-1"
+              alt=""
+              src="./public/decentalized-img@2x.png"
+            />
+          <div class="mid">
+            <div class="decentralized-transaction-thro-container">
+              <span class="bitcoin-btc-txt-container">
+                  Decentralized Transaction through 
+                  <span class="polygon">Polygon</span>
+             <br> Blockchain on TriPay
+              </span>
+            </div>
+            <div class="our-goal-is-container3">
+              <span>Enabling the users to engage in peer-to-peer exchanges without the interference of Banking Institutions.
+                TriPay embraces decentralized transactions and opening up new possibilities for Financial Inclusion, Global Accessibility, and Economic Empowerment,
+               paving the way for a more <br> inclusive and equitable financial landscape.
+              </span>
+              <span class="blockchain-technology"></span>
+            </div>
+           
+            
+          </div>
+        </section> 
+
+    <div class="min" id="main2">
+      <h2 class="explore-endless-possibilities" id="main2-heading">
+        Explore endless possibilities with TriPay
+      </h2>
+      <div class="cards">
+        <div class="rectangle-parent" id="main2-card1">
+          <img class="mobile-login-bro-2" alt="" src="./public/main2-img2@2x.png" />
+          <div class="main2-card1-text">
+            <h2 class="user-friendly-ui" id="main2-card1-heading">
+              User Friendly UI
+            </h2>
+            <p> User-friendly UI for a blockchain making the technology more approachable and inclusive to a broader 
+              audience. Offering clear instructions 
+              and visual cues to guide users through the various functionalities.</div>
+
+        </div>
+
+        <div class="our-goal-is-to-make-global-tra-parent" id="main2-card2">
+          <img class="mobile-login-rafiki-1-1" alt="" src="./public/main2-img1@2x.png" />
+          <div class="main2-card2-txt">
+
+            <h2 class="semless-transparent-container" id="main2-card1-heading">Seamless & Transparent</h2>
+            <p class="our-goal-is-container2" id="main2-card1-p">
+              The hassle app ensures that users can navigate through its features and 
+functionalities without encountering non relevant complexities or technical barriers.
+ Through transparent mechanisms, users can verify the authenticity, integrity, and
+  traceability of information stored on the blockchain. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- news -->
+    
+      <!-- <section class="second-last" id="popular">
+        <h2 class="popular-cryptocurrencies" id="popular-h2">
+          <p class="semless">Popular cryptocurrencies</p>
+        </h2>
+        <div class="name-parent" id="popular-p">
+          <div class="name">Name</div>
+          <div class="last-transaction">Last Trans.</div>
+          <div class="h-change">24h Change</div>
+          <div class="market-cap">Market Cap</div>
+        </div>
+
+        <div class="rectangle-group" id="bit-card">
+          <img
+            class="png-transparent-bitcoin-cash-c-icon"
+            alt=""
+            src="./public/pngtransparentbitcoincashcryptocurrencymoneyblockchainelectionflyerstextorangelogoremovebgpreview-1@2x.png"
+          />
+
+          <div class="bitcoin-btc">
+              <p class="bitcoin">Bitcoin </p>
+              <p class="btc">BTC</p>
+          </div>
+          <div  class="div">$334</div>
+          <div  class="div1">$334</div>
+          <div class="div2">$334</div>
+        </div>
+
+
+        <div class="vector-parent" id="eth-card">
+          <img
+            class="pngtreeethereum-cryptocurrenc-icon"
+            alt=""
+            src="./public/pngtreeethereum-cryptocurrency-coin-icon-6259537-1@2x.png"
+          />
+
+          <div class="etherum-eth">
+              <p class="bitcoin">Etherum </p>
+              <p class="btc">ETH</p>
+          </div>
+          <div  class="div">$334</div>
+          <div class="div1">$334</div>
+          <div class="div2">$334</div>
+        </div>
+
+
+        <div class="rectangle-container" id="matic-card">
+          <img
+            class="download-removebg-preview-1-icon"
+            alt=""
+            src="./public/downloadremovebgpreview-1@2x.png"
+          />
+
+          <div class="polygon-matic">
+              <p>Polygon </p>
+              <p class="btc">MAT</p>
+          </div>
+          <div class="div">$334</div>
+          <div class="div1">$334</div>
+          <div class="div2">$334</div>
+        </div>
+       
+       
+      </section> -->
+
+      <div style="display: flex; margin:1rem 4rem;">
+        <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script> <div class="livecoinwatch-widget-1" lcw-coin="BTC" lcw-base="USD" lcw-secondary="BTC" lcw-period="d" lcw-color-tx="#ffffff" lcw-color-pr="#8357d2" lcw-color-bg="#1f2434" lcw-border-w="1" lcw-digits="9" ></div>
+        <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script> <div class="livecoinwatch-widget-1" lcw-coin="ETH" lcw-base="USD" lcw-secondary="BTC" lcw-period="d" lcw-color-tx="#ffffff" lcw-color-pr="#8357d2" lcw-color-bg="#1f2434" lcw-border-w="1" lcw-digits="9" ></div>
+        <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script> <div class="livecoinwatch-widget-1" lcw-coin="MATIC" lcw-base="USD" lcw-secondary="BTC" lcw-period="d" lcw-color-tx="#ffffff" lcw-color-pr="#8357d2" lcw-color-bg="#1f2434" lcw-border-w="1" lcw-digits="9" ></div>
+      </div>
+      <div class="footer">
+        <div class="footer-child"></div>
+      </div>
+      <div class="all-copyrights-reserved">
+        All Copyrights Reserved @2023 Tripay
+      </div>
+    </div>  
+  </div>
+</body>
+
+</html>

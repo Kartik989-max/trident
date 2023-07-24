@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TransactionGateway</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></script>
+    <style>
+
+
+
+
+
+
+.tri-pay-text {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 185px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #0055f3, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+* {
+  box-sizing : border-box;
+}
+
+
+.animation-container {
+  display: relative;
+  
+
+  width : 200px;
+  height : 300px;
+}
+
+.container {
+  position: relative;
+  bottom : 20px;
+  height : 250px;
+  width : 190px;
+  transform : scale(0.5) translateX(0) scaleY(0.7);
+  margin: 0 auto; /* add this line */
+}
+
+.y-axis-container {
+   animation: bounce 2.6s infinite ease-in-out;
+}
+
+.shadow {
+   animation: scaling 2.6s infinite ease-in-out;
+}
+
+.coin {
+  position : absolute;
+  height : 300px;
+  left : 0;
+  width: 170px;
+  background : gold;
+  border-radius : 100%;
+  overflow : hidden;
+}
+
+.side-coin {
+  position : absolute;
+  left : 85px;
+  height : 300px;
+  width: 35px;
+  background : #f5b642;
+}
+
+.side {
+  position: absolute;
+  background : #f5b642;
+  left : 22px;
+  width : 165px;
+  height : 304px;
+  top: -2px;
+}
+
+.shine {
+  width : 400px;
+  height : 20px;
+  background : rgba(255,255,255,0.65);
+  transform: rotate(25deg);
+  animation : shine 5s infinite; 
+}
+
+.flash {
+  z-index: 200;
+  position : absolute;
+  width : 15px;
+  height : 15px;
+  background : white;
+  top: 30px;
+  right : 20px;
+  animation : flash 7s infinite;
+}
+
+.dai {
+  position : absolute;
+  width: 100px;
+  height : 100px;
+  background : #faf20a;
+  border: 1px solid white;
+  transform : rotate(53deg) skew(26deg);
+  top: 94px;
+  left : 35px;
+  overflow : hidden;
+}
+
+.cutout {
+  z-index : 20;
+  width : 150%;
+  height : 150%;
+  background : #ffee38;
+  transform : rotate(45deg);
+  position : absolute;
+  top : 29px;
+  left : 29px;
+}
+
+.dai-shadow {
+  z-index : 20;
+  width : 150%;
+  height : 150%;
+  background : rgba(0,0,0,0.07);
+  transform : rotate(45deg);
+  position : absolute;
+  top : 29px;
+  right : 29px;
+}
+
+.inner-dai {
+  position : relative;
+  background : white;
+  height : 70px;
+  width: 70px;
+  top : 15px;
+  left : 15px;
+}
+
+.inner-inner-dai {
+  position : relative;
+  background : #ffee38;
+  width: 20px;
+  height : 20px;
+  top : 25px;
+  left : 25px;
+}
+
+.shadow { 
+  position : relative;
+  left : calc(50% - 60px);
+  top : -40px;
+  background : rgba(0,0,0,0.2);
+  height : 30px;
+  width : 100px;
+  animation : scaling 2.6s infinite;
+  border-radius: 100%;
+}
+
+@keyframes bounce {
+  20% {
+    animation-timing-function: ease-out;
+    transform: translateY(-60px);
+  }
+  
+   50% {
+    animation-timing-function: ease-out;
+    transform: translateY(-80px);
+  }
+}
+
+@keyframes scaling {
+  20% {
+    transform: scale(0.6);
+  }
+  
+  50% {
+    transform: scale(0.5);
+  }
+}
+
+@keyframes flash {
+  0% {
+    transform : rotate(0deg) scale(0);
+  }
+  8% {
+    transform : rotate(0deg) scale(0);
+  }
+  10% {
+    transform : rotate(150deg) scale(1.8);
+  }
+  15% {
+    transform : rotate(45deg) scale(0);
+  }
+  100% {
+    transform : rotate(45deg) scale(0);
+  }
+}
+
+
+@keyframes shine {
+  20% {
+    transform : rotate(25deg) translateY(400px);
+  }
+  
+  100% {
+    transform : rotate(25deg) translateY(400px);
+  }
+}
+
+
+
+
+
+        body {
+   background-color: rgb(255, 255, 255);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+        button {
+  background-color: #405DE6;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #5777ED;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+        input {
+  width: 300px;
+  height: 30px;
+  font-size: 18px;
+  font-family: 'Helvetica Neue', sans-serif;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background-color: #ffffff;
+  transition: border-bottom-color 0.3s ease-in-out;
+}
+
+input:focus {
+  outline: none;
+  border-bottom-color: #1e90ff;
+  background-color: #fff;
+  box-shadow: 0 0 5px #1e90ff;
+}
+
+input::placeholder {
+  color: #000000;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 30px #f7f7f7 inset;
+  -webkit-text-fill-color: #333;
+}
+
+
+        #readArea {
+            flex-basis: 50%;
+        }
+        #writeArea {
+            flex-basis: 50%;
+        }
+        button:hover {
+            background-color: rgb(99, 0, 90);
+        }
+
+
+
+
+        table {
+    border-collapse: separate;
+    border-spacing: 8px 0px; /* add spacing between cells */
+    border-radius: 10px; /* set border radius */
+    overflow: hidden; /* hide overflow from rounded corners */
+  }
+  td {
+    padding: 20px; /* add some padding to cells */
+  }        
+
+    </style>
+</head>
+<body>
+
+  
+  
+  <div class="tri-pay-text">TriPay</div>
+
+<!--coin animation-->
+
+      <div class="animation-container">
+        <div class="y-axis-container">
+          <div class="container">
+            <div class="flash"></div>
+            <div class="coin side">
+              <div class="shine" style="transform:rotate(-30deg);"></div>
+            </div>
+            <div class="side-coin"></div>
+            <div class="coin">
+              <div class="dai">
+                <div class="inner-dai">
+                  <div class="inner-inner-dai">
+      
+                  </div>
+                </div>
+                <div class="cutout"></div>
+                <div class="dai-shadow"></div>
+              </div>
+              <div class="shine"></div>
+            </div>
+          </div>
+        </div>
+        <div class="shadow"></div>
+      </div>
+
+<!--mainSection-->
+
+<table align="center" style="border: 2px solid black;">
+
+  <tr>
+    <td>
+      <div id="readArea">
+        <button onclick="connectMetamask()">CONNECT TO METAMASK</button>
+        <p id="userArea">Status: Not connected to Metamask</p>
+
+        <button onclick="connectContract()">CONNECT TO WALLET</button>
+        <p id="contractArea">Status: Not connected to Wallet</p>
+
+        <button onclick="getContractAccount()"> GET WALLET ADDRESS</ADDREss> </button>
+        <p id="contractAccount">Wallet Address: Not Connected to Wallet</p>
+        <button onclick="getBalanceApple()">GET BALANCE OF THE WALLET</button>
+        <p id="balanceArea">Balance: Not Connected to Wallet</p>
+      </div>
+    </td>
+    <td>
+      <div id="writeArea">
+        <button onclick="depositContract()">Send ether to the Wallet</button><br>
+        <input type="number" id="depositInput" placeholder="Enter Amount"><br> <br>
+
+        <button onclick="withdraw()">WITHDRAW ETHER TO ANY Wallet ADDRESS</button> <br>
+        <input type="text" id="addressInput" placeholder="Enter Address"> <br>
+        <input type="number" id="amountInput" placeholder="Enter Amount"> 
+      </div>
+    </td>
+  </tr>
+</table>
+
+    <script>
+
+        let account;
+        const connectMetamask = async () => {
+            if(window.ethereum !== "undefined") {
+                const accounts = await ethereum.request({method: "eth_requestAccounts"});
+                account = accounts[0];
+                document.getElementById("userArea").innerHTML = `User Account: ${account}`;
+            }
+        }
+
+        const connectContract = async () => {
+            const ABI =[
+                {
+                  "inputs": [],
+                  "name": "deposit",
+                  "outputs": [],
+                  "stateMutability": "payable",
+                  "type": "function"
+                },
+                {
+                  "inputs": [
+                    {
+                      "internalType": "address payable",
+                      "name": "_to",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "_amount",
+                      "type": "uint256"
+                    }
+                  ],
+                  "name": "withdraw",
+                  "outputs": [],
+                  "stateMutability": "nonpayable",
+                  "type": "function"
+                },
+                {
+                  "inputs": [],
+                  "name": "getAddress",
+                  "outputs": [
+                    {
+                      "internalType": "address",
+                      "name": "",
+                      "type": "address"
+                    }
+                  ],
+                  "stateMutability": "view",
+                  "type": "function"
+                },
+                {
+                  "inputs": [],
+                  "name": "getBalance",
+                  "outputs": [
+                    {
+                      "internalType": "uint256",
+                      "name": "",
+                      "type": "uint256"
+                    }
+                  ],
+                  "stateMutability": "view",
+                  "type": "function"
+                }
+              ]
+            const Address = "0x86C05f9B86B1a489747a64574992368eeF4cC200";
+            window.web3 = await new Web3(window.ethereum);
+            window.contract = await new window.web3.eth.Contract(ABI, Address);
+            document.getElementById("contractArea").innerHTML = "Connected to Wallet";
+        }
+
+        const getContractAccount = async () => {
+            const data = await window.contract.methods.getAddress().call();
+            document.getElementById("contractAccount").innerHTML = `Wallet Address: ${data}`;
+        }
+
+        const getBalanceApple = async () => {
+            const data = await window.contract.methods.getBalance().call();
+            document.getElementById("balanceArea").innerHTML = `Current Balance: ${data}`;
+        }
+
+        const depositContract = async () => {
+            const amount = document.getElementById("depositInput").value ;
+            await window.contract.methods.deposit().send({from: account, value: amount});
+        }
+
+        const withdraw = async () => {
+            const amount = document.getElementById("amountInput").value;
+            const address = document.getElementById("addressInput").value;
+            await window.contract.methods.withdraw(address, amount).send({from: account});
+        }
+
+    </script>
+   
+</body>
+</html>

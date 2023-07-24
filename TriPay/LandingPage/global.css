@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-baloo-bhai-2: "Baloo Bhai 2";
+  --font-baloo-bhai: "Baloo Bhai";
+
+  /* font sizes */
+  --font-size-6xl: 25px;
+  --font-size-3xl: 22px;
+  --font-size-7xl: 26px;
+  --font-size-31xl: 50px;
+  --font-size-14xl: 33px;
+
+  /* Colors */
+  --color-gray-100: rgba(255, 255, 255, 0.5);
+  --color-white: #fff;
+  --color-gainsboro: rgba(217, 217, 217, 0.05);
+  --color-slategray-100: #666a87;
+  --color-slategray-200: #676a84;
+  --color-slategray-300: rgba(103, 106, 132, 0.74);
+  --color-mediumslateblue: #8352d2;
+  --color-darkgray: #859ea2;
+  --color-mediumpurple: rgba(149, 136, 235, 0.05);
+
+  /* Paddings */
+  --padding-xs: 12px;
+  --padding-xl: 20px;
+
+  /* border radiuses */
+  --br-xl: 20px;
+  --br-3xs: 10px;
+  --br-mini: 15px;
+}
